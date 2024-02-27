@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servisio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_tel.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="website icon" type="png" href="icon/main-icon.png">
+    <script src="js.js"></script>
+</head>
+<?php
+session_start();
+require_once 'BD/db.php';
+$ID_Person = $_SESSION['ID_Person'];
+$sql = 'SELECT ID, Img FROM  `BD_Customer` WHERE ID='.$ID_Person;
+$Person_img;
+
+if ($result = $conn->query($sql)) {
+    foreach ($result as $r) {
+        global $Person_img;
+        $Person_img = $r['Img'];
+    }
+}
+
+
+?>
+
+<body>
+    <form action="" method="POST">
+        <nav>
+            <div tabindex="1" class="logo" onclick="go('main.php')"><img src="img/logo.png" /></div>
+            <div class="serch"><img src="icon/zoom-search.svg">
+                <input tabindex="2" id="search" type="search" autocomplete="off" name="serch" placeholder="Поиск услуг">
+                <input type="submit" name='send' id='serch_send' value="&#10003;">
+            </div>
+            <ul class="menu">
+                <li tabindex="3" id="menu-categor" onclick="go('categorii.php')"><img
+                        src="icon/categories.png">КАТЕГОРИИ</li>
+                <li tabindex="4" id="menu-notif" onclick="go('')"><img src="icon/notification.png">УВЕДОМЛЕНИЯ</li>
+            </ul>
+            <div class="button" onclick="go('user.php')">
+                <img src="<?php echo $Person_img ?>" class='user'>
+            </div>
+
+        </nav>
+    </form>
+
+    <div class="nav_tel">
+        <div class="home" onclick="go('main.php')"><img src="icon/home.png"></div>
+        <div class="serch" onclick="go('categorii.php')"><img src="icon/search.png"></div>
+        <div class="user" onclick="go('user.php')"><img src="<?php echo $Person_img ?>"></div>
+    </div>
+    <section class="content">
+        <div class="service__block">
+
+
+            <?php
+
+
+            $ID_Person = $_SESSION['ID_Person'];
+            $sql = 'SELECT BD_Servic.*, BD_Seller.Name FROM BD_Servic INNER JOIN BD_Seller ON BD_Servic.ID_Person = BD_Seller.ID';
+            if ($result = $conn->query($sql)) {
+
+                if ($rowsCount = mysqli_num_rows($result) != 0) {
+
+                    foreach ($result as $row) {
+
+                       
+                        $id_person = $row['ID_Person'];
+                        $name_person = $row['Name'];
+                        $id = $row['ID'];
+                        $src =  $row['ImgHref'];
+                        $name = $row['Denomination'];
+                        $ad = $row['Address'];
+                        $stage = $row['Experience'];
+                        $ssql='SELECT  round(AVG(Value),2) AS Value FROM BD_Reviews WHERE ID_Servic ='.$id;
+                        if ($result = $conn->query($ssql)) {
+                                foreach ($result as $cout) {
+                                    break;  
+                                }
+                            }
+                        echo ' <div class="card"> 
+                        <div class="service__card" onclick="go(\'servic.php?id=' . $id . '\')">
+                            <img class="card_img" src="' . $src . '" alt="маникюр">
+                            <div class="card__title">' . $name . '</div>
+                            <div class="card_inf">' . $ad . '</div>
+                            
+                            <div class="line_card">
+                                <div id="stag" data-tooltip="стаж"><img src="icon/time.png" alt="">' . $stage . '</div>
+                                <div id="star" data-tooltip="оценка"><img src="icon/star-black.png" alt="">'.$cout['Value'].'</div>
+                            </div>
+                            <div class="card_master">
+                                <img src="img/img3.png">
+                                <span>' . $name_person . '</span>
+                            </div>
+                        </div>
+                    </div>
+                    ';
+                    }
+                } else print('Ничего не найдено');
+            }
+
+            ?>
+        </div>
+    </section>
+</body>
+
+</html>

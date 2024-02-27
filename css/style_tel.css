@@ -1,0 +1,173 @@
+@media (max-width: 850px) {
+	nav {
+		display: none;
+	}
+
+	.nav_tel {
+		position: fixed;
+		display: flex;
+		justify-content: space-evenly;
+		height: 50px;
+		width: 96vw;
+		left: 0px;
+		top: 0px;
+		background-color: var(--color-menu);
+		padding: 0px 2vw;
+		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+		z-index: 5;
+	}
+
+	.nav_tel img {
+		display: block;
+		height: 30px;
+		margin: auto;
+		margin-top: 11px;
+	}
+
+	.nav_tel .home {
+		height: 130%;
+		width: 25%;
+		background-color: var(--color-button-dark);
+		border-radius: 0px 0px 40% 40%;
+	}
+
+	.nav_tel .serch {
+		height: 100%;
+		width: 25%;
+	}
+
+	.nav_tel .notif{
+		height: 100%;
+		width: 25%;
+	}
+
+	.nav_tel .user {
+		height: 100%;
+		width: 25%;
+	}
+	.nav_tel .user img{
+		border-radius: 30px;
+	
+	}
+
+	.content {
+		width: 90vw;
+		margin: auto;
+		margin-top: 70px;
+		display: flex;
+	}
+
+
+
+	.service__card {
+		grid-template-columns: 70px 70px;
+		grid-template-rows: 80px 10px 25px 14px 25px 20px;
+		box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+	}
+	
+	
+	.card__title {
+		font-size: var(--size-text2);
+	}
+	
+	.card_inf {
+		font-size: var(--size-text);
+	}
+	
+	.card:hover {
+		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.486);
+	}
+	
+	.line_card {
+		font-size: var(--size-text);
+	
+	}
+	
+	.line_card img {
+		width: 15px;
+		margin-top: -3px;
+		margin-right: 3px;
+	}
+	
+	
+	.card_master {
+		font-size: var(--size-text);
+	}
+	
+	.card_master img {
+		width: 30px;
+		height: 30px;
+	}
+	
+	
+	
+	/*  ВСПЛЫВАЮЩИЕ ПОДСКАЗКИ */
+	#stag::before {
+		content: attr(data-tooltip);
+		position: absolute;
+		width: 57px;
+		height: 20px;
+		/* top: 0; */
+		/* right: -40px; */
+		background: var(--color-button-dark);
+		color: #000000;
+		box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+		pointer-events: none;
+		transition: .2s ease-in-out .4s;
+		border-radius: 10px;
+		text-align: center;
+		font-size: 16px;
+		opacity: 0;
+		margin: -10px 0px 0px 7px;
+	}
+	
+	#stag:hover::before {
+		opacity: 1;
+	}
+	
+	#star::before {
+		content: attr(data-tooltip);
+		position: absolute;
+		width: 67px;
+		height: 20px;
+		/* top: 0; */
+		/* right: -40px; */
+		background: var(--color-button-dark);
+		color: #000000;
+		box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+		pointer-events: none;
+		transition: .2s ease-in-out .4s;
+		border-radius: 10px;
+		text-align: center;
+		font-size: 16px;
+		opacity: 0;
+		margin: -10px 0px 0px 0px;
+	}
+	
+	#star:hover::before {
+		opacity: 1;
+	}
+	
+	#like::before {
+		content: attr(data-tooltip);
+		position: absolute;
+		width: 57px;
+		height: 20px;
+		/* top: 0; */
+		/* right: -40px; */
+		background: var(--color-button-dark);
+		color: #000000;
+		box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+		pointer-events: none;
+		transition: .2s ease-in-out .4s;
+		border-radius: 10px;
+		text-align: center;
+		font-size: 16px;
+		opacity: 0;
+		margin: -10px 0px 0px 0px;
+	}
+	
+	#like:hover::before {
+		opacity: 1;
+	}
+}

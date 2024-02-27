@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RabotaDy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_admin.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="website icon" type="png" href="icon/time-is-money2.png">
+    <script src="js.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="logo" onclick="go('index.html')"><img src="img/logo.png" /></div>
+        <ul class="menu">
+            <li id="menu-categor" onclick="go('')">БАЗА ДАННЫХ</li>
+            <li id="menu-like" onclick="go('')">ЗАЯВКИ</li>
+        </ul>
+    </nav>
+    <div class="nav_tel">
+        <div class="home" onclick="go('index.html')"><img src="icon/home.png"></div>
+        <div class="serch" onclick="go('search.html')"><img src="icon/search.png"></div>
+        <div class="favorint" onclick="go('favorit.html')"><img src="icon/heart2.png"></div>
+        <div class="user" onclick="go('user_add.html')"><img src="icon/user.png"></div>
+    </div>
+
+    <section class="content">
+
+        <div class="tabs">
+            <input class="input" name="tabs" type="radio" id="tab-1" checked="checked" />
+            <label class="label" for="tab-1">Добавить</label>
+            <div class="panel">
+                <h1>Заяки на добавление:</h1>
+                <div class="service__block">
+                    
+                    <div class="card">
+                        <div class="card_img"><img src="img/img2.png"></div>
+                        <div class="main_inf">
+                            <b><label>NAMeNAMR</label></b>
+                            <label>Arina arina</label>
+                            <label>ufheyf dslfjals 21 </label>
+                            <label>12Ж00-113Ж00 </label>
+                        </div>
+                        <div class="prices">
+                            <div class="price">
+                                <label class="num">25$</label>
+                                <label class="h">2 часа</label>
+                                <label class="s">Укрепление волос </label>
+                            </div>
+                           
+                        </div>
+                        <textarea disabled=disabled  class='inf' readonly> оаловждлафовыдаодлвы оадлвы оаловы длаовыоажвыфоа длоо дл овыдлаодвыфл оов фдэзщуцшщ зщ ф</textarea>
+                        <button class="yes">ok</button>
+                        <button class="no">delete  </button>
+                    </div>
+                   
+                    
+                </div>
+            </div>
+            <input class="input" name="tabs" type="radio" id="tab-2" />
+            <label class="label" for="tab-2">Редактировать</label>
+            <div class="panel">
+                <h1>Заявки на редактирование:</h1>
+
+                <div class="service__block">
+                    <div class="card"> <!-- для тени -->
+                        <div class="service__card" onclick="go('servic.html')">
+                            <img class="card_img" src="img/img.png" alt="маникюр">
+                            <div class="card__title">Серая мышь</div>
+                            <div class="card_inf">Колесниково 28-11</div>
+                            <div class="line_card">
+                                <div id="stag" data-tooltip="стаж"><img src="icon/time.png" alt="">2</div>
+                                <div id="star" data-tooltip="оценка"><img src="icon/star-black.png" alt="">5</div>
+                                <!-- <div id="like" data-tooltip="лайки"><img src="icon/heart-black.png" alt="">45</div> -->
+                            </div>
+                            <div class="card_master">
+                                <img src="img/img3.png">
+                                <span>Арина</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card"> <!-- для тени -->
+                        <div class="service__card" onclick="go('servic.html')">
+                            <img class="card_img" src="img/img.png" alt="маникюр">
+                            <div class="card__title">Серая мышь</div>
+                            <div class="card_inf">Колесниково 28-11</div>
+                            <div class="line_card">
+                                <div id="stag" data-tooltip="стаж"><img src="icon/time.png" alt="">2</div>
+                                <div id="star" data-tooltip="оценка"><img src="icon/star-black.png" alt="">5</div>
+                                <!-- <div id="like" data-tooltip="лайки"><img src="icon/heart-black.png" alt="">45</div> -->
+                            </div>
+                            <div class="card_master">
+                                <img src="img/img3.png">
+                                <span>Арина</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                </div>
+            <input class="input" name="tabs" type="radio" id="tab-3" />
+            <label class="label" for="tab-3">Удалить</label>
+            <div class="panel">
+                <h1>Заявки на удаление:</h1>
+                <div class="service__block">
+                    <div class="card"> <!-- для тени -->
+                        <div class="service__card" onclick="go('servic.html')">
+                            <img class="card_img" src="img/img.png" alt="маникюр">
+                            <div class="card__title">Серая мышь</div>
+                            <div class="card_inf">Колесниково 28-11</div>
+                            <div class="line_card">
+                                <div id="stag" data-tooltip="стаж"><img src="icon/time.png" alt="">2</div>
+                                <div id="star" data-tooltip="оценка"><img src="icon/star-black.png" alt="">5</div>
+                                <!-- <div id="like" data-tooltip="лайки"><img src="icon/heart-black.png" alt="">45</div> -->
+                            </div>
+                            <div class="card_master">
+                                <img src="img/img3.png">
+                                <span>Арина</span>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+           </div>
+        </div>
+    </section>
+</body>
+
+</html>

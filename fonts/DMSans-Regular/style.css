@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'DM Sans';
+    src: local('DM Sans Regular'), local('DM-Sans-Regular'),
+        url('DMSans-Regular.woff2') format('woff2'),
+        url('DMSans-Regular.woff') format('woff'),
+        url('DMSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }

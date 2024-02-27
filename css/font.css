@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'DM Sans';
+    src: local('DM Sans Regular'), local('DM-Sans-Regular'),
+        url('fonts/DMSans-Regular/DMSans-Regular.woff2') format('woff2'),
+        url('../fonts/DMSans-Regular/DMSans-Regular.woff') format('woff'),
+        url('../fonts/DMSans-Regular/DMSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM Sans-Bold';
+    src: local('DM Sans Bold'), local('DM-Sans-Bold'),
+        url('fonts/DMSans-Bold/DMSans-Bold.woff2') format('woff2'),
+        url('fonts/DMSans-Bold/DMSans-Bold.woff') format('woff'),
+        url('fonts/DMSans-Bold/DMSans-Bold.ttf') format('truetype');
+    font-weight:700px;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter'), 
+        url('../fonts/Inter/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+    font-weight:bold;
+    font-style:italic;
+}
+@font-face {
+    font-family: 'Inter-norm';
+    src: local('Inter'), 
+        url('../fonts/Inter/static/Inter-SemiBold.ttf') format('truetype');
+    font-weight:normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cygre';
+    src: local('Cygre'), local('Cygre'),
+        url('../fonts/Cygre.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'junegull';
+    src: local('junegull'), local('junegull'),
+        url('../fonts/junegull/junegull.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Comfortaa';
+    src: local('Comfortaa'),
+        url('../fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Comfortaa-bold';
+    src: local('Comfortaa-bold'), local('Comfortaa-bold'),
+        url('../fonts/Comfortaa/static/Comfortaa-Bold.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}

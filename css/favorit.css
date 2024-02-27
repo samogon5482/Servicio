@@ -1,0 +1,20 @@
+#searh_categor {
+    display: none;
+
+}
+
+@media (max-width: 850px) {
+.nav_tel .home {
+    height: 100%;
+    width: 25%;
+    background-color: transparent;
+    border-radius: none;
+}
+
+.nav_tel .favorint {
+    height: 130%;
+    width: 25%;
+    background-color: var(--color-button-dark);
+    border-radius: 0px 0px 40% 40%;
+}
+}

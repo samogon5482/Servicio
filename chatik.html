@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RabotaDy</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style_tel.css">
+  <!-- <link rel="stylesheet" href="css/chat.css"> -->
+  <link rel="stylesheet" href="css/chatik.css">
+  <link rel="stylesheet" href="css/color.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="website icon" type="png" href="icon/time-is-money2.png">
+  <script src="js.js"></script>
+</head>
+
+<body>
+  <form action="" method="POST">
+    <nav>
+        <div tabindex="1" class="logo" onclick="go('main.php')"><img src="img/logo.png" /></div>
+        <div class="serch"><img src="icon/zoom-search.svg">
+            <input tabindex="2" id="search" type="search" autocomplete="off" name="serch" placeholder="Поиск услуг">
+            <input type="submit" name='send' id='serch_send' value="&#10003;">
+            <?php 
+                if(isset($_POST['serch'])){
+                    $sql = 'SELECT * FROM  BD_Servic WHERE Denomination LIKE "%'.$_POST['serch'].'%" AND Check_admin=1';
+                }
+            ?>
+        </div>
+        <ul class="menu">
+            <li tabindex="3" id="menu-categor" onclick="go('categorii.php')"><img src="icon/categories.png">КАТЕГОРИИ</li>
+            <li tabindex="4" id="menu-notif" onclick="go('')"><img src="icon/notification.png">УВЕДОМЛЕНИЯ</li>
+        </ul>
+        <div class="button" onclick="go('user.php')">
+            <img src="<?php echo $Person_img ?>" class='user'>
+        </div>
+    </nav>
+</form>
+<div class="nav_tel">
+    <div class="home" onclick="go('main.php')"><img src="icon/home.png"></div>
+    <div class="serch" onclick="go('categorii.php')"><img src="icon/search.png"></div>
+    <div class="user" onclick="go('user.php')"><img src="<?php echo $Person_img ?>"></div>
+</div>
+  <body>
+    <div class="container">
+      <div class="row">
+        <section class="discussions">
+          <ul>
+            <li class="discussion"><img class="icon_person" src="img/img2.png"><p>Олдвоыаловы</p></li>
+            <li class="discussion"><img class="icon_person" src="img/img2.png"><p>Олдвоыаловы</p></li>
+            <li class="discussion"><img class="icon_person" src="img/img2.png"><p>Олдвоыаловы</p></li>
+            <li class="discussion"><img class="icon_person" src="img/img2.png"><p>Олдвоыаловы</p></li>
+            <li class="discussion"><img class="icon_person" src="img/img2.png"><p>Олдвоыаловы</p></li>
+            <li class="discussion"><img class="icon_person" src="img/img2.png"><p>Олдвоыаловы</p></li>
+
+
+        </ul>
+        </section>
+
+        <section class="chat">
+
+          <div class="header-chat">
+            <!-- <i class="icon fa fa-user-o" aria-hidden="true"></i> -->
+            <img class="icon_person" src="img/img.png">
+            <p class="name">Megan Leib</p>
+            <!-- <i class="icon clickable fa fa-ellipsis-h right" aria-hidden="true"></i> -->
+          </div>
+
+          <div class="messages-chat">
+
+              <?php?>
+            <div class="message text-only" data-tooltip="12:00">
+              <p class="text"> What are you doing tonight ? Want to go take a drink ?</p>
+            </div>
+            <!-- <p class="time"> 14h58</p> -->
+            <div class="message text-only">
+              <div class="response">
+                <p class="text"> Hey Megan ! It's been a while 😃</p>
+              </div>
+            </div>
+          
+
+
+          <div class="footer-chat">
+            <textarea type="text" name="message" class="write-message" placeholder="Type your message here"></textarea>
+           <input type="submit" name="send" class="send" value="&#9002;">
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</body>
+
+</html>

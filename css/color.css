@@ -1,0 +1,27 @@
+:root{
+    --color-bg:var(--color-gray);
+    --color-menu:var(--color-1);
+    --color-button-dark:var(--color-2);
+    --font:var(--font-Comfortaa);
+    --font2:var(--font-Comfortaa-bold);
+    --color-gray:#EAEAEA;
+    /*    --color-blue:#0042cf ;
+    --color-orange:#FFA900; */
+    --color-1:#1B263B;
+    --color-2:#757995;
+    --color-white:#f1f1f1;
+    /* --color-white:#f2f2fa; */
+    /* --color-yellow:#FFF5CB; */
+    --font-Inter:'Inter';
+    --font-Inter-norm:'Inter-norm';
+    --font-Cygre:'Cygre';
+    --font-junegull:'junegull';
+    --font-Comfortaa:"Comfortaa";
+    --font-Comfortaa-bold:"Comfortaa-bold";
+    --size-text:calc(8px + 0.4vw);
+    --size-text2:calc(9px + 0.5vw);
+    --size-bigtext:calc(10px + 1.2vw);
+    --size-bigertext:calc(12px + 1.2vw);
+
+
+}

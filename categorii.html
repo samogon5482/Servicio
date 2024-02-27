@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RabotaDy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/categorii.css">
+    <link rel="stylesheet" href="css/style_tel.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="website icon" type="png" href="icon/time-is-money2.png">
+    <script src="js.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="logo" onclick="go('index2.html')"><img src="img/logo.png" /></div>
+        <div class="serch"><img src="icon/zoom-search.svg"><input id="search" type="search" autocomplete="off">
+        </div>
+        <ul class="menu">
+            <li id="menu-categor" onclick="go('')"><img src="icon/categories.png">КАТЕГОРИИ</li>
+            <li id="menu-notif" onclick="go('')"><img src="icon/notification.png">УВЕДОМЛЕНИЯ</li>
+        </ul>
+        <div class="button" onclick="go('user_add_servic.html')">ВОЙТИ</div>
+    </nav>
+    <div class="nav_tel">
+        <div class="home" onclick="go('index.html')"><img src="icon/home.png"></div>
+        <div class="serch" onclick="go('search.html')"><img src="icon/search.png"></div>
+        <div class="user" onclick="go('user_add.html')"><img src="icon/user.png"></div>
+    </div>
+
+    <section class="content">
+        <div style="margin: auto;">
+            <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A39cff12ba39a6b53b675c68669378c9d8baa4b1eff0cb79972fc7bacbeb72b00&amp;width=779&amp;height=449&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+        <form action="" method="POST">
+            <div class="filter">
+                <div class="select" style=" width: 38em;">
+                <select  name='tag'>
+                    <option value="">Категория</option>
+                    <option value="Графический дизайн">Графический дизайн</option>
+                    <option value="Дизайн помещений">Дизайн помещений</option>
+                    <option value="Изготовление дубликатов ключей">Изготовление дубликатов ключей</option>
+                    <option value="Маникюр, педикюр">Маникюр, педикюр</option>
+                    <option value="Музыкальная, танцевальная, актёрская деятельность">Музыкальная, танцевальная,
+                        актёрская
+                        деятельность</option>
+                    <option value="Переноска грузов">Переноска грузов</option>
+                    <option value="Письменный и устный перевод">Письменный и устный перевод</option>
+                    <option value="Продажа пищевой продукции собственного приготовления">Продажа пищевой продукции
+                        собственного приготовления</option>
+                    <option value="Работа с одеждой">Работа с одеждой</option>
+                    <option value="Разработка веб-сайтов">Разработка веб-сайтов</option>
+                    <option value="Ремонт">Ремонт</option>
+                    <option value="Репетиторство">Репетиторство</option>
+                    <option value="Услуги в сельскохозяйственной сфере">Услуги в сельскохозяйственной сфере</option>
+                    <option value="Услуги парикмахера и визажиста">Услуги парикмахера и визажиста</option>
+                    <option value="Услуги по уборке">Услуги по уборке</option>
+                    <option value="Уход за взрослыми и детьми">Уход за взрослыми и детьми</option>
+                    <option value="Фото- и видеосъёмка">Фото- и видеосъёмка</option>
+                </select>
+                </div>
+
+                <div class="select">
+                    <select>
+                        <option value="">Стаж</option>
+                        <option value="<=3">меньше 3 лет</option>
+                        <option value=">=4">4 года и больше</option>
+                        <option value=">=6">6 лет и больше</option>
+                        <option value=">=8">8 лет и больше</option>
+                    </select>
+                </div>
+                <div class="select">
+                    <select>
+                        <option value="">Оценки</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+            </div>
+            <input type="submit" class="send" value="Поиск" >
+        </form>
+
+        <section class="content">
+            <div class="service__block">
+                <div class="card"> <!-- для тени -->
+                    <div class="service__card" onclick="go('servic.html')">
+                        <img class="card_img" src="img/img.png" alt="маникюр">
+                        <div class="card__title">Серая мышь</div>
+                        <div class="card_inf">Колесниково 28-11</div>
+                        <div class="line_card">
+                            <div id="stag" data-tooltip="стаж"><img src="icon/time.png" alt="">2</div>
+                            <div id="star" data-tooltip="оценка"><img src="icon/star-black.png" alt="">5</div>
+                            <!-- <div id="like" data-tooltip="лайки"><img src="icon/heart-black.png" alt="">45</div> -->
+                        </div>
+                        <div class="card_master">
+                            <img src="img/img3.png">
+                            <span>Арина</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card"> <!-- для тени -->
+                    <div class="service__card" onclick="go('servic.html')">
+                        <img class="card_img" src="img/img.png" alt="маникюр">
+                        <div class="card__title">Серая мышь</div>
+                        <div class="card_inf">Колесниково 28-11</div>
+                        <div class="line_card">
+                            <div id="stag" data-tooltip="стаж"><img src="icon/time.png" alt="">2</div>
+                            <div id="star" data-tooltip="оценка"><img src="icon/star-black.png" alt="">5</div>
+                            <!-- <div id="like" data-tooltip="лайки"><img src="icon/heart-black.png" alt="">45</div> -->
+                        </div>
+                        <div class="card_master">
+                            <img src="img/img3.png">
+                            <span>Арина</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card"> <!-- для тени -->
+                    <div class="service__card" onclick="go('servic.html')">
+                        <img class="card_img" src="img/img2.png" alt="маникюр">
+                        <div class="card__title">Глазки у хаски</div>
+                        <div class="card_inf">А. Бачило 28-91</div>
+                        <div class="line_card">
+                            <div id="stag" data-tooltip="стаж"><img src="icon/time.png" alt="">1</div>
+                            <div id="star" data-tooltip="оценка"><img src="icon/star-black.png" alt="">4</div>
+                            <!-- <div id="like" data-tooltip="лайки"><img src="icon/heart-black.png" alt="">45</div> -->
+                        </div>
+                        <div class="card_master">
+                            <img src="img/img3.png">
+                            <span>Вероника</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </section>
+    </section>
+</body>
+
+</html>

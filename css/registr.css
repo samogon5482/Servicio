@@ -1,0 +1,163 @@
+.Form_registr {
+    background-color: #FFF;
+    width: 50vw;
+    margin: 12vh auto 0px;
+    padding: 35px;
+    border-radius: 30px;
+    
+}
+.head{
+display: flex;
+justify-content: space-between;
+}
+
+label {
+    font-size: var(--size-bigtext);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    padding-top: 20px;
+}
+
+.fio {
+    display: flex;
+    justify-content: space-between;
+}
+
+.password {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-data input {
+    position: relative;
+    border: none;
+    font-family: var(--font);
+    padding: 10px 8px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+    width: 22vw;
+}
+
+.fio input {
+    width: 14vw;
+}
+
+
+
+.input-data span {
+    position: absolute;
+    transition: all 0.5s ease-out ;
+    transform: translateX(-22.5vw) translateY(60%);
+    z-index: -1;
+    opacity: 0;
+}
+
+.fio span {
+    transform: translateX(-14.5vw) translateY(60%);
+}
+
+
+
+input:focus::placeholder{
+color: transparent;
+}
+input:focus~span,
+input:valid~span {
+    z-index: 1;
+    opacity: 1;
+    transform: translateX(-23vw) translateY(-100%);
+}
+
+.fio input:focus~span,
+.fio input:valid~span {
+    transform: translateX(-15vw) translateY(-100%);
+}
+
+.password input:focus~span,
+.password input:valid~span {
+    transform: translateX(-23vw) translateY(-100%);
+}
+
+#submit{
+    font-size: calc(9px + 0.6vw);
+    border: none;
+    font-family: var(--font);
+    padding: 10px 8px;
+    border-radius: 10px;
+    background-color: var(--color-button-dark);
+	box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s ease-out ;
+    color:#FFF;
+}
+#submit:hover, #submit:focus{
+    background-color: var(--color-white);
+    color:#000;
+}
+
+/* =============================================== */
+.label, .toggle {
+    height: 40px;
+    border-radius: 40px;
+  }
+ .label{
+    width: 50%;
+    background-color: var(--color-white);
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+  }
+  .toggle {
+    position: absolute;
+    width: 50%;
+    background-color: var(--color-button-dark);
+    box-shadow: 0 2px 15px rgba(0,0,0,.15);
+    transition: transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .names {
+    width: 78%;
+    margin-left: 13%;
+    margin-top: .3%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+  }
+  .dark {
+    opacity: .5;
+  }
+  
+  .light{
+    color: #FFF;
+}
+  [type="checkbox"] {
+    display: none;
+  }
+
+  [type="checkbox"]:checked + .label .toggle{
+    transform: translateX(100%);
+  }
+  [type="checkbox"]:checked + .label .dark{
+    opacity: 1;
+    color: #FFF;
+  }
+  [type="checkbox"]:checked + .label .light{
+    opacity: .5;
+    color: #000;
+  }
+
+  .href{
+    text-align: center;
+    margin: auto;
+  }
+
+@media (max-width: 900px){
+  .Form_registr {
+    width: 65vw;
+    padding: 25px;
+    
+}
+}
